@@ -32,7 +32,7 @@ otm-portfolio/
 │   ├── brand/  (favicon.svg, otm-logo.png, otm-logo-mark.png)
 │   ├── css/portfolio.css
 │   ├── js/portfolio.js
-│   └── media/csuf-project-rebound-preview.png
+│   └── media/  (CSUF full-page capture + landscape overview)
 ├── scripts/        (Windows one-click .bat helpers — blocked from public)
 ├── .github/workflows/netlify-deploy.yml
 └── docs/deploy/NETLIFY_GITHUB_WORKFLOW.md
