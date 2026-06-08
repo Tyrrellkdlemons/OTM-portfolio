@@ -59,8 +59,8 @@ if ($html -notmatch 'class="project-static-preview"[\s\S]+csuf-project-rebound-p
   throw 'The CSU Fullerton static preview is missing.'
 }
 
-if ($html -notmatch 'href="/assets/css/portfolio\.css\?v=fullsite-20260608"') {
-  throw 'The portfolio stylesheet needs a cache-busting version for the full-site preview release.'
+if ($html -notmatch 'href="/assets/css/portfolio\.css\?v=contrast-20260608-3"') {
+  throw 'The portfolio stylesheet needs a cache-busting version for the contrast release.'
 }
 
 if ($fullPageDimensions.Height -lt 2500 -or $fullPageDimensions.Height -le $fullPageDimensions.Width) {
@@ -79,6 +79,34 @@ $previewRule = [regex]::Match(
 
 if (-not $previewRule.Success -or $previewRule.Groups['body'].Value -notmatch 'object-fit:\s*contain') {
   throw 'Rebound preview must use object-fit: contain so the full capture is visible.'
+}
+
+if ($css -notmatch '(?s)body\s*\{[^}]*color:\s*var\(--text\)') {
+  throw 'Body text must follow the active theme text variable.'
+}
+
+if ($css -notmatch '(?s)\.project-card\s*\{[^}]*--text:\s*#f4ebd6[^}]*--text-mute:') {
+  throw 'Dark project cards must keep their own readable light text variables in every theme.'
+}
+
+if ($css -notmatch '(?s)footer\s*\{[^}]*--text:\s*#f4ebd6[^}]*--text-mute:') {
+  throw 'The dark footer must keep its own readable light text variables in every theme.'
+}
+
+if ($css -notmatch '(?s)body\[data-theme="editorial"\]\s*\{[^}]*--ui-accent:\s*#[0-9a-fA-F]{6}') {
+  throw 'Editorial theme needs a dark readable accent for labels on light surfaces.'
+}
+
+if ($css -notmatch '(?s)body\[data-theme="editorial"\]\s+\.final-cta h2 \.glow\s*\{[^}]*linear-gradient') {
+  throw 'Editorial CTA gradient must use colors that remain visible on the light background.'
+}
+
+if ($css -notmatch '(?s)body\[data-theme="editorial"\]\s+\.project-card\s*\{[^}]*background:\s*#[0-9a-fA-F]{6}') {
+  throw 'Editorial project cards need an opaque dark background behind their light text.'
+}
+
+if ($css -notmatch '(?s)\.theme-switch\s*\{[^}]*display:\s*grid[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)') {
+  throw 'Mobile theme controls must show all four themes in a two-column grid.'
 }
 
 Write-Host "Portfolio preview checks passed: full-page source $($fullPageDimensions.Width)x$($fullPageDimensions.Height), overview $($previewDimensions.Width)x$($previewDimensions.Height); three live iframes preserved."
