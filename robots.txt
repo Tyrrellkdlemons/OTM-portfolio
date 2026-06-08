@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /scripts/
+
+Sitemap: https://otm-portfolio.netlify.app/sitemap.xml

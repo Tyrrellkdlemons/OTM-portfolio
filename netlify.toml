@@ -1,0 +1,39 @@
+# Netlify config — OTM Portfolio
+# Static site, no build step. Publish from repo root.
+
+[build]
+  publish = "."
+  command = "echo 'Static site — no build step needed.'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Block one-click scripts from being served publicly
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*.bat"
+  to = "/404"
+  status = 404
+  force = true
+
+# Fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

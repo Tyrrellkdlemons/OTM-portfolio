@@ -1,0 +1,12 @@
+{
+  "name": "OTM Portfolio",
+  "short_name": "OTM Folio",
+  "description": "Live showcase of monument sites built by Out The Mud Work Shops.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#100804",
+  "theme_color": "#e8641b",
+  "icons": [
+    { "src": "/assets/brand/otm-logo.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

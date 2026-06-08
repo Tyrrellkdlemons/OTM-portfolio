@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#100804">
+<meta name="description" content="OTM Portfolio — a curated showcase of monument sites built and supported by Out The Mud Work Shops. Live previews, switchable themes, and a direct path to book a consultation.">
+<meta name="author" content="Out The Mud Work Shops">
+
+<meta property="og:title" content="OTM Portfolio | Out The Mud Work Shops">
+<meta property="og:description" content="Live showcase of monument sites built and supported by OTM. Switchable themes. Direct booking.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://otm-portfolio.netlify.app/">
+<meta property="og:image" content="/assets/brand/otm-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OTM Portfolio">
+<meta name="twitter:description" content="Live showcase of monument sites built and supported by OTM.">
+<meta name="twitter:image" content="/assets/brand/otm-logo.png">
+<link rel="canonical" href="https://otm-portfolio.netlify.app/">
+
+<title>OTM Portfolio | Out The Mud Work Shops</title>
+
+<link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/brand/otm-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/portfolio.css">
+</head>
+<body data-theme="classic" class="layout-grid">
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- MINIMAL HEADER -->
+<header class="p-header">
+  <a href="https://otm-workshops.netlify.app/" class="home">Home</a>
+  <div class="status"><span class="blink"></span> Live Portfolio · Updated <span id="yr"></span></div>
+  <a href="https://otm-workshops.netlify.app/contact.html" class="book" target="_blank" rel="noopener">Book Now →</a>
+</header>
+
+<!-- LOGO + HERO -->
+<div class="p-stage">
+
+  <div class="logo-block">
+    <img src="/assets/brand/otm-logo.png" alt="Out The Mud Work Shops">
+    <div class="wordmark">Out The Mud <span class="accent">/</span> Portfolio</div>
+    <div class="submark">South LA · Work Shops · Live Showcase</div>
+  </div>
+
+  <div class="p-hero">
+    <h1>
+      <span class="framed">Sites</span>
+      <span class="framed alt">we built</span>
+      <span class="framed dark">to last.</span>
+    </h1>
+    <p class="lead">A live showcase of monument projects shipped, supported, and still running. Use the switchboard below to recolor the page, swap the layout, or open any project in its native habitat.</p>
+    <div class="meta-row">
+      <span class="meta-pill">4 monument sites</span>
+      <span class="meta-pill">Live previews</span>
+      <span class="meta-pill">Switchable themes</span>
+      <span class="meta-pill">Built · South LA</span>
+    </div>
+  </div>
+
+  <!-- GADGET PANEL -->
+  <div class="gadget-panel">
+    <div class="gadget">
+      <h4>Theme Engine</h4>
+      <div class="theme-switch">
+        <button class="active" data-set-theme="classic">Classic</button>
+        <button data-set-theme="terminal">Terminal</button>
+        <button data-set-theme="street">Street</button>
+        <button data-set-theme="editorial">Editorial</button>
+      </div>
+    </div>
+    <div class="gadget">
+      <h4>Layout</h4>
+      <div class="layout-switch">
+        <button class="active" data-set-layout="grid" title="Grid view">▦</button>
+        <button data-set-layout="list" title="List view">≡</button>
+        <span style="margin-left:.75rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-mute);letter-spacing:.1em;">Switch between grid and list</span>
+      </div>
+    </div>
+    <div class="gadget">
+      <h4>Live Refresh</h4>
+      <div class="live-toggle">
+        <div class="toggle" id="liveToggle" role="switch" aria-checked="false" aria-label="Auto-refresh previews every minute"></div>
+        <span>Auto-refresh previews</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="projects-head">
+    <h2>The <em>monuments.</em></h2>
+    <div class="pcount">04 / live sites</div>
+  </div>
+
+  <div class="project-grid cols-2" id="projectGrid">
+
+    <!-- Claremont Justice Education -->
+    <div class="project-card">
+      <div class="project-frame-wrap">
+        <iframe class="project-frame" data-src="https://colleges.claremont.edu/justice-education"
+          loading="lazy" referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          title="Claremont Colleges — Justice Education"></iframe>
+        <div class="project-fallback">
+          <div class="glyph">⚖️</div>
+          <div class="msg">Preview blocked by site policy</div>
+          <div class="url">colleges.claremont.edu/justice-education</div>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="tagline">Education · Higher-Ed Initiative</div>
+        <h3>Claremont Justice Education</h3>
+        <p>A cross-campus academic initiative spanning the Claremont Colleges consortium — programs, research, and partner organizations advancing justice education.</p>
+        <div class="tags"><span>Education</span><span>Multi-Campus</span><span>Mission-Driven</span></div>
+        <div class="cta-row">
+          <a class="primary" href="https://colleges.claremont.edu/justice-education" target="_blank" rel="noopener">Open Site →</a>
+          <a class="ghost" href="https://otm-workshops.netlify.app/contact.html" target="_blank" rel="noopener">Get Yours</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fullerton Rebound -->
+    <div class="project-card">
+      <div class="project-frame-wrap">
+        <iframe class="project-frame" data-src="https://www.fullerton.edu/rebound"
+          loading="lazy" referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          title="CSU Fullerton — Project Rebound"></iframe>
+        <div class="project-fallback">
+          <div class="glyph">🎓</div>
+          <div class="msg">Preview blocked by site policy</div>
+          <div class="url">fullerton.edu/rebound</div>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="tagline">Higher Education · Reentry Program</div>
+        <h3>CSU Fullerton — Project Rebound</h3>
+        <p>Fullerton's Project Rebound supports the matriculation and graduation of formerly incarcerated students through wraparound services and community.</p>
+        <div class="tags"><span>Higher Ed</span><span>Reentry</span><span>Impact</span></div>
+        <div class="cta-row">
+          <a class="primary" href="https://www.fullerton.edu/rebound" target="_blank" rel="noopener">Open Site →</a>
+          <a class="ghost" href="https://otm-workshops.netlify.app/contact.html" target="_blank" rel="noopener">Get Yours</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Safe Haven for Empowerment -->
+    <div class="project-card">
+      <div class="project-frame-wrap">
+        <iframe class="project-frame" data-src="https://safehavenforempowerment.org"
+          loading="lazy" referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          title="Safe Haven for Empowerment"></iframe>
+        <div class="project-fallback">
+          <div class="glyph">🛡️</div>
+          <div class="msg">Preview blocked by site policy</div>
+          <div class="url">safehavenforempowerment.org</div>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="tagline">Nonprofit · Community Empowerment</div>
+        <h3>Safe Haven for Empowerment</h3>
+        <p>A community organization providing safe spaces, advocacy, and direct support — a digital home that matches the steadiness of the work.</p>
+        <div class="tags"><span>Nonprofit</span><span>Community</span><span>Advocacy</span></div>
+        <div class="cta-row">
+          <a class="primary" href="https://safehavenforempowerment.org" target="_blank" rel="noopener">Open Site →</a>
+          <a class="ghost" href="https://otm-workshops.netlify.app/contact.html" target="_blank" rel="noopener">Get Yours</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mable's Home -->
+    <div class="project-card">
+      <div class="project-frame-wrap">
+        <iframe class="project-frame" data-src="https://mableshome.com"
+          loading="lazy" referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          title="Mable's Home"></iframe>
+        <div class="project-fallback">
+          <div class="glyph">🏡</div>
+          <div class="msg">Preview blocked by site policy</div>
+          <div class="url">mableshome.com</div>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="tagline">Residential · Service Brand</div>
+        <h3>Mable's Home</h3>
+        <p>A warm, dignified home for those who need one — a digital front door designed to feel as welcoming as the people behind it.</p>
+        <div class="tags"><span>Service</span><span>Hospitality</span><span>Brand</span></div>
+        <div class="cta-row">
+          <a class="primary" href="https://mableshome.com" target="_blank" rel="noopener">Open Site →</a>
+          <a class="ghost" href="https://otm-workshops.netlify.app/contact.html" target="_blank" rel="noopener">Get Yours</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DUNS + STATS STRIP -->
+<div class="duns-strip">
+  <div class="duns-cell">
+    <div class="lbl">DUNS</div>
+    <div class="val" id="dunsVal">10-071-2248</div>
+  </div>
+  <div class="duns-cell">
+    <div class="lbl">Founded</div>
+    <div class="val">2024</div>
+  </div>
+  <div class="duns-cell">
+    <div class="lbl">Home</div>
+    <div class="val">South LA</div>
+  </div>
+  <div class="duns-cell">
+    <div class="lbl">Sites Live</div>
+    <div class="val">4+</div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Want one of <span class="glow">these?</span></h2>
+  <p>20-minute consult. We listen for the choke points, then ship the build. None of these took longer than 4 weeks.</p>
+  <a href="https://otm-workshops.netlify.app/contact.html" class="cta-btn-big" target="_blank" rel="noopener"><span>Book Your Free Consultation</span><span class="arr">→</span></a>
+</section>
+
+<!-- FOOTER — full info incl. DUNS placeholder -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>OTM <span class="accent">/</span> Portfolio</h4>
+        <p style="color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.75rem;">Future-proofing local economies through AI</p>
+        <p>A South LA-based social enterprise building practical AI automation for small businesses, nonprofits, and the institutions that serve them. This portfolio is a live showcase — not a screenshot.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/demetrious-robinson/" target="_blank" aria-label="Demetrious Robinson on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg></a>
+          <a href="https://www.linkedin.com/in/terrell-d-lemons/" target="_blank" aria-label="Terrell D. Lemons on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg></a>
+          <a href="https://github.com/Tyrrellkdlemons" target="_blank" aria-label="GitHub" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.3-3.2-.1-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Portfolio</h5>
+        <a href="https://colleges.claremont.edu/justice-education" target="_blank" rel="noopener">Claremont Justice Ed</a>
+        <a href="https://www.fullerton.edu/rebound" target="_blank" rel="noopener">CSUF Project Rebound</a>
+        <a href="https://safehavenforempowerment.org" target="_blank" rel="noopener">Safe Haven</a>
+        <a href="https://mableshome.com" target="_blank" rel="noopener">Mable's Home</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>OTM Studio</h5>
+        <a href="https://otm-workshops.netlify.app/" target="_blank" rel="noopener">Main Site</a>
+        <a href="https://otm-workshops.netlify.app/workshops.html" target="_blank" rel="noopener">Workshops</a>
+        <a href="https://otm-workshops.netlify.app/leadership.html" target="_blank" rel="noopener">Leadership</a>
+        <a href="https://otm-workshops.netlify.app/contact.html" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Compliance</h5>
+        <div class="static-line">Legal Name<br><span>Out The Mud Work Shops</span></div>
+        <div class="static-line">DUNS<br><span>10-071-2248</span></div>
+        <div class="static-line">Location<br><span>South Los Angeles, CA</span></div>
+        <div class="static-line">Email<br><span>hello@outthemudworkshops.com</span></div>
+        <a href="https://otm-workshops.netlify.app/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://otm-workshops.netlify.app/terms" target="_blank" rel="noopener">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="yr2"></span> Out The Mud Work Shops LLC. All rights reserved.</div>
+      <div class="made">portfolio.v1 · made <span class="heart">♥</span> in south la</div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/portfolio.js"></script>
+<script>
+  // duplicate the year element id for the footer
+  document.getElementById('yr2').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
