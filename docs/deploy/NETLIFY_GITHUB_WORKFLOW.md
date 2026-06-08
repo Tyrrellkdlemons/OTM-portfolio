@@ -4,9 +4,9 @@ Project name: `OTM-portfolio`
 
 GitHub: `https://github.com/Tyrrellkdlemons/OTM-portfolio`
 
-Netlify production URL: `https://otm-portfolio.netlify.app`
+Netlify production URL: `https://otmworkshops-portfolio.netlify.app`
 
-Netlify admin URL: `https://app.netlify.com/projects/otm-portfolio`
+Netlify admin URL: `https://app.netlify.com/projects/otmworkshops-portfolio`
 
 ## Local source
 
@@ -42,8 +42,7 @@ If the repo doesn't exist yet, create it on GitHub first (Public, no README/lice
 
 ```bash
 netlify login                      # browser-based
-netlify sites:create --name otm-portfolio
-netlify link --name otm-portfolio
+netlify link --name otmworkshops-portfolio
 netlify deploy --prod --dir=.
 ```
 

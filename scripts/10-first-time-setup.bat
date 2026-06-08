@@ -45,7 +45,7 @@ echo.
 echo  -- Step 5: Link to Netlify project --
 echo  Run:
 echo    netlify login
-echo    netlify link --name otm-portfolio
+echo    netlify link --name otmworkshops-portfolio
 echo.
 echo  Then deploy with scripts\03-deploy-netlify.bat
 echo.

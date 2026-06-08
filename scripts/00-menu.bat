@@ -8,7 +8,7 @@ echo.
 echo  ============================================================
 echo   OTM // PORTFOLIO  ::  ONE-CLICK MENU
 echo   Project: OTM-portfolio
-echo   Live:    https://otm-portfolio.netlify.app
+echo   Live:    https://otmworkshops-portfolio.netlify.app
 echo   Repo:    https://github.com/Tyrrellkdlemons/OTM-portfolio
 echo  ============================================================
 echo.

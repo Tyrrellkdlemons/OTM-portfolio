@@ -26,6 +26,6 @@ echo  =========================
 netlify status
 :SKIP_NL
 echo.
-echo  Production URL: https://otm-portfolio.netlify.app
-echo  Admin URL:      https://app.netlify.com/projects/otm-portfolio
+echo  Production URL: https://otmworkshops-portfolio.netlify.app
+echo  Admin URL:      https://app.netlify.com/projects/otmworkshops-portfolio
 exit /b 0

@@ -13,7 +13,7 @@ echo  =========================================
 echo.
 echo  Pre-flight: this requires you have already
 echo   - Created repo Tyrrellkdlemons/OTM-portfolio on GitHub
-echo   - Created site otm-portfolio on Netlify (or it auto-creates)
+echo   - Linked site otmworkshops-portfolio on Netlify
 echo.
 pause
 

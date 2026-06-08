@@ -1,6 +1,6 @@
 /* ============================================================
    OTM // PORTFOLIO — interactive layer
-   Custom cursor · particles · iframe loader with fallback
+   Custom cursor · iframe loader with fallback
    theme/layout switches · reveals · konami
    ============================================================ */
 (function () {
@@ -139,6 +139,7 @@
   if (liveToggle) {
     liveToggle.addEventListener('click', () => {
       const on = liveToggle.classList.toggle('on');
+      liveToggle.setAttribute('aria-checked', String(on));
       if (on) {
         liveTimer = setInterval(() => {
           document.querySelectorAll('.project-frame.loaded').forEach(f => {

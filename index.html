@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#100804">
-<meta name="description" content="OTM Portfolio — a curated showcase of monument sites built and supported by Out The Mud Work Shops. Live previews, switchable themes, and a direct path to book a consultation.">
+<meta name="description" content="OTM Portfolio — a curated showcase of monument sites built and supported by Out The Mud Work Shops, with live and captured previews.">
 <meta name="author" content="Out The Mud Work Shops">
 
 <meta property="og:title" content="OTM Portfolio | Out The Mud Work Shops">
-<meta property="og:description" content="Live showcase of monument sites built and supported by OTM. Switchable themes. Direct booking.">
+<meta property="og:description" content="A polished showcase of monument sites built and supported by OTM, with live and captured previews.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://otm-portfolio.netlify.app/">
+<meta property="og:url" content="https://otmworkshops-portfolio.netlify.app/">
 <meta property="og:image" content="/assets/brand/otm-logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OTM Portfolio">
-<meta name="twitter:description" content="Live showcase of monument sites built and supported by OTM.">
+<meta name="twitter:description" content="Monument sites built and supported by OTM, presented through live and captured previews.">
 <meta name="twitter:image" content="/assets/brand/otm-logo.png">
-<link rel="canonical" href="https://otm-portfolio.netlify.app/">
+<link rel="canonical" href="https://otmworkshops-portfolio.netlify.app/">
 
 <title>OTM Portfolio | Out The Mud Work Shops</title>
 
@@ -57,10 +57,10 @@
       <span class="framed alt">we built</span>
       <span class="framed dark">to last.</span>
     </h1>
-    <p class="lead">A live showcase of monument projects shipped, supported, and still running. Use the switchboard below to recolor the page, swap the layout, or open any project in its native habitat.</p>
+    <p class="lead">A showcase of monument projects shipped, supported, and still running. Explore live and captured previews, switch the presentation, or open any project on its official site.</p>
     <div class="meta-row">
       <span class="meta-pill">4 monument sites</span>
-      <span class="meta-pill">Live previews</span>
+      <span class="meta-pill">Live + captured previews</span>
       <span class="meta-pill">Switchable themes</span>
       <span class="meta-pill">Built · South LA</span>
     </div>
@@ -88,8 +88,8 @@
     <div class="gadget">
       <h4>Live Refresh</h4>
       <div class="live-toggle">
-        <div class="toggle" id="liveToggle" role="switch" aria-checked="false" aria-label="Auto-refresh previews every minute"></div>
-        <span>Auto-refresh previews</span>
+        <button class="toggle" id="liveToggle" type="button" role="switch" aria-checked="false" aria-label="Auto-refresh live previews every minute"></button>
+        <span>Refresh live previews</span>
       </div>
     </div>
   </div>
@@ -105,7 +105,7 @@
   <div class="project-grid cols-2" id="projectGrid">
 
     <!-- Claremont Justice Education -->
-    <div class="project-card">
+    <div class="project-card" data-project-index="01">
       <div class="project-frame-wrap">
         <iframe class="project-frame" data-src="https://colleges.claremont.edu/justice-education"
           loading="lazy" referrerpolicy="no-referrer"
@@ -130,17 +130,16 @@
     </div>
 
     <!-- Fullerton Rebound -->
-    <div class="project-card">
+    <div class="project-card" data-project-index="02">
       <div class="project-frame-wrap">
-        <iframe class="project-frame" data-src="https://www.fullerton.edu/rebound"
-          loading="lazy" referrerpolicy="no-referrer"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-          title="CSU Fullerton — Project Rebound"></iframe>
-        <div class="project-fallback">
-          <div class="glyph">🎓</div>
-          <div class="msg">Preview blocked by site policy</div>
-          <div class="url">fullerton.edu/rebound</div>
-        </div>
+        <a class="project-static-preview" href="https://www.fullerton.edu/rebound/" target="_blank" rel="noopener"
+          aria-label="Open the live CSU Fullerton Project Rebound website">
+          <img src="/assets/media/csuf-project-rebound-preview.png"
+            alt="CSU Fullerton Project Rebound homepage showing graduates and the message Transforming Lives Through Education"
+            loading="lazy" width="1920" height="945">
+          <span class="preview-badge">Static preview</span>
+          <span class="preview-action">View live site <span aria-hidden="true">↗</span></span>
+        </a>
       </div>
       <div class="project-meta">
         <div class="tagline">Higher Education · Reentry Program</div>
@@ -155,7 +154,7 @@
     </div>
 
     <!-- Safe Haven for Empowerment -->
-    <div class="project-card">
+    <div class="project-card" data-project-index="03">
       <div class="project-frame-wrap">
         <iframe class="project-frame" data-src="https://safehavenforempowerment.org"
           loading="lazy" referrerpolicy="no-referrer"
@@ -180,7 +179,7 @@
     </div>
 
     <!-- Mable's Home -->
-    <div class="project-card">
+    <div class="project-card" data-project-index="04">
       <div class="project-frame-wrap">
         <iframe class="project-frame" data-src="https://mableshome.com"
           loading="lazy" referrerpolicy="no-referrer"
@@ -230,18 +229,18 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <h2>Want one of <span class="glow">these?</span></h2>
-  <p>20-minute consult. We listen for the choke points, then ship the build. None of these took longer than 4 weeks.</p>
+  <p>Start with a focused 20-minute consultation. We listen for the choke points, scope the right build, and stay close through launch.</p>
   <a href="https://otm-workshops.netlify.app/contact.html" class="cta-btn-big" target="_blank" rel="noopener"><span>Book Your Free Consultation</span><span class="arr">→</span></a>
 </section>
 
-<!-- FOOTER — full info incl. DUNS placeholder -->
+<!-- FOOTER — full company information including DUNS -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>OTM <span class="accent">/</span> Portfolio</h4>
         <p style="color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.75rem;">Future-proofing local economies through AI</p>
-        <p>A South LA-based social enterprise building practical AI automation for small businesses, nonprofits, and the institutions that serve them. This portfolio is a live showcase — not a screenshot.</p>
+        <p>A South LA-based social enterprise building practical AI automation for small businesses, nonprofits, and the institutions that serve them. This portfolio combines live previews with a verified capture when a partner site blocks framing.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/demetrious-robinson/" target="_blank" aria-label="Demetrious Robinson on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg></a>
           <a href="https://www.linkedin.com/in/terrell-d-lemons/" target="_blank" aria-label="Terrell D. Lemons on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg></a>
