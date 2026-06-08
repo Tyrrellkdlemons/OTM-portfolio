@@ -59,6 +59,10 @@ if ($html -notmatch 'class="project-static-preview"[\s\S]+csuf-project-rebound-p
   throw 'The CSU Fullerton static preview is missing.'
 }
 
+if ($html -notmatch 'href="/assets/css/portfolio\.css\?v=fullsite-20260608"') {
+  throw 'The portfolio stylesheet needs a cache-busting version for the full-site preview release.'
+}
+
 if ($fullPageDimensions.Height -lt 2500 -or $fullPageDimensions.Height -le $fullPageDimensions.Width) {
   throw "Rebound source must be a full-page portrait capture; found $($fullPageDimensions.Width)x$($fullPageDimensions.Height)."
 }
