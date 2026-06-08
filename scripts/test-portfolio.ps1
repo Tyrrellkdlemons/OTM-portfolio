@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $htmlPath = Join-Path $projectRoot 'index.html'
 $cssPath = Join-Path $projectRoot 'assets\css\portfolio.css'
-$previewPath = Join-Path $projectRoot 'assets\media\csuf-project-rebound-preview.jpg'
+$previewPath = Join-Path $projectRoot 'assets\media\csuf-project-rebound-hero-preview.jpg'
 $fullPagePath = Join-Path $projectRoot 'assets\media\csuf-project-rebound-full-page.jpg'
 
 $html = Get-Content -LiteralPath $htmlPath -Raw
@@ -55,20 +55,31 @@ if ($html -match '<iframe[^>]+fullerton') {
   throw 'The CSU Fullerton site must use the static preview, not a blocked iframe.'
 }
 
-if ($html -notmatch 'class="project-static-preview"[\s\S]+csuf-project-rebound-preview\.jpg') {
+if ($html -notmatch 'class="project-frame-wrap rebound-preview-wrap"[\s\S]+csuf-project-rebound-hero-preview\.jpg') {
   throw 'The CSU Fullerton static preview is missing.'
 }
 
-if ($html -notmatch 'href="/assets/css/portfolio\.css\?v=contrast-20260608-3"') {
-  throw 'The portfolio stylesheet needs a cache-busting version for the contrast release.'
+$reboundCard = [regex]::Match(
+  $html,
+  '(?s)<!-- Fullerton Rebound -->(?<card>.*?)<!-- Safe Haven for Empowerment -->'
+)
+if (-not $reboundCard.Success -or $reboundCard.Groups['card'].Value -match 'preview-(badge|action)') {
+  throw 'The Rebound screenshot must remain unobstructed by preview overlays.'
+}
+if ($reboundCard.Groups['card'].Value -notmatch 'loading="eager"') {
+  throw 'The Rebound screenshot must load eagerly so iframe traffic cannot delay the preview.'
+}
+
+if ($html -notmatch 'href="/assets/css/portfolio\.css\?v=rebound-hero-20260608"') {
+  throw 'The portfolio stylesheet needs a cache-busting version for the Rebound hero preview release.'
 }
 
 if ($fullPageDimensions.Height -lt 2500 -or $fullPageDimensions.Height -le $fullPageDimensions.Width) {
   throw "Rebound source must be a full-page portrait capture; found $($fullPageDimensions.Width)x$($fullPageDimensions.Height)."
 }
 
-if ($previewDimensions.Width -le $previewDimensions.Height) {
-  throw "Rebound card preview must present the complete capture in a landscape overview; found $($previewDimensions.Width)x$($previewDimensions.Height)."
+if ($previewDimensions.Width -ne 1905 -or $previewDimensions.Height -ne 945) {
+  throw "Rebound card preview must match the attached 1905x945 hero viewport; found $($previewDimensions.Width)x$($previewDimensions.Height)."
 }
 
 $previewRule = [regex]::Match(
@@ -79,6 +90,10 @@ $previewRule = [regex]::Match(
 
 if (-not $previewRule.Success -or $previewRule.Groups['body'].Value -notmatch 'object-fit:\s*contain') {
   throw 'Rebound preview must use object-fit: contain so the full capture is visible.'
+}
+
+if ($css -notmatch '(?s)\.project-frame-wrap\.rebound-preview-wrap\s*\{[^}]*aspect-ratio:\s*1905\s*/\s*945') {
+  throw 'The Rebound frame must use the screenshot aspect ratio so it is not cropped.'
 }
 
 if ($css -notmatch '(?s)body\s*\{[^}]*color:\s*var\(--text\)') {
@@ -109,4 +124,4 @@ if ($css -notmatch '(?s)\.theme-switch\s*\{[^}]*display:\s*grid[^}]*grid-templat
   throw 'Mobile theme controls must show all four themes in a two-column grid.'
 }
 
-Write-Host "Portfolio preview checks passed: full-page source $($fullPageDimensions.Width)x$($fullPageDimensions.Height), overview $($previewDimensions.Width)x$($previewDimensions.Height); three live iframes preserved."
+Write-Host "Portfolio preview checks passed: Rebound hero $($previewDimensions.Width)x$($previewDimensions.Height); three live iframes preserved."

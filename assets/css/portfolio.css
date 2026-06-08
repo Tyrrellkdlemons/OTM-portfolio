@@ -333,6 +333,9 @@ body::after {
   background: linear-gradient(135deg, var(--mud-warm), var(--mud-deep));
   overflow: hidden; border-bottom: 1px solid rgba(232, 100, 27, .15);
 }
+.project-frame-wrap.rebound-preview-wrap {
+  aspect-ratio: 1905 / 945;
+}
 .project-frame {
   width: 100%; height: 100%; border: 0; display: block;
   background: var(--mud-bg); opacity: 0; transition: opacity .6s;
@@ -728,10 +731,14 @@ body[data-theme="editorial"] .final-cta h2 .glow {
 body.layout-list .project-grid.cols-2 { grid-template-columns: 1fr; }
 body.layout-list .project-card { display: grid; grid-template-columns: 280px 1fr; }
 body.layout-list .project-frame-wrap { aspect-ratio: auto; height: 100%; min-height: 180px; }
+body.layout-list .project-frame-wrap.rebound-preview-wrap {
+  aspect-ratio: 1905 / 945; height: auto; min-height: 0;
+}
 body.layout-list .project-meta { padding: 1.5rem; }
 @media (max-width: 800px) {
   body.layout-list .project-card { grid-template-columns: 1fr; }
   body.layout-list .project-frame-wrap { aspect-ratio: 16/10; min-height: 0; }
+  body.layout-list .project-frame-wrap.rebound-preview-wrap { aspect-ratio: 1905 / 945; }
 }
 
 /* MOTION SAFE */

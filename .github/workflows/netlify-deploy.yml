@@ -22,7 +22,7 @@ jobs:
           test -f assets/brand/otm-logo.png
           test -f assets/css/portfolio.css
           test -f assets/js/portfolio.js
-          test -f assets/media/csuf-project-rebound-preview.jpg
+          test -f assets/media/csuf-project-rebound-hero-preview.jpg
           test -f assets/media/csuf-project-rebound-full-page.jpg
 
       - name: Check Netlify secrets
